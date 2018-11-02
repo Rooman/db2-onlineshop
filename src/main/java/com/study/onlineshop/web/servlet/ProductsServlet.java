@@ -19,19 +19,6 @@ public class ProductsServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Cookie[] cookies = req.getCookies();
-        boolean isAuth = false;
-
-        if (cookies != null) {
-            for (Cookie cookie : cookies) {
-                if (cookie.getName().equals("user-token")) {
-                    if (activeTokens.contains(cookie.getValue())) {
-                        isAuth = true;
-                    }
-                    break;
-                }
-            }
-        }
 
         if (isAuth) {
             PageGenerator pageGenerator = PageGenerator.instance();
