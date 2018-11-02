@@ -4,7 +4,6 @@ import com.study.onlineshop.dao.jdbc.JdbcProductDao;
 import com.study.onlineshop.service.impl.DefaultProductService;
 import com.study.onlineshop.web.filter.UserRoleSecurityFilter;
 import com.study.onlineshop.web.servlet.LoginServlet;
-import com.study.onlineshop.web.servlet.ProductsApiServlet;
 import com.study.onlineshop.web.servlet.ProductsServlet;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.FilterHolder;
@@ -52,4 +51,3 @@ public class Starter {
         server.start();
     }
 }
-0101010101010101010111110010101010101

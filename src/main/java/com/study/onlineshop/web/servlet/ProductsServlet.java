@@ -15,11 +15,9 @@ import java.util.List;
 
 public class ProductsServlet extends HttpServlet {
     private ProductService productService;
-    private List<String> activeTokens;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         if (isAuth) {
             PageGenerator pageGenerator = PageGenerator.instance();
             List<Product> products = productService.getAll();
